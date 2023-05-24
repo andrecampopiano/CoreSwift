@@ -253,13 +253,6 @@
       },
       {
         "kind": "Import",
-        "name": "Reachability",
-        "printedName": "Reachability",
-        "declKind": "Import",
-        "moduleName": "CoreSwift"
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -6907,8 +6900,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "SystemConfiguration",
+        "printedName": "SystemConfiguration",
         "declKind": "Import",
         "moduleName": "CoreSwift",
         "declAttributes": [
@@ -6917,8 +6910,1707 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CoreSwift"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ReachabilityError",
+        "printedName": "ReachabilityError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "failedToCreateWithAddress",
+            "printedName": "failedToCreateWithAddress",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreSwift.ReachabilityError.Type) -> (Darwin.sockaddr, Swift.Int32) -> CoreSwift.ReachabilityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Darwin.sockaddr, Swift.Int32) -> CoreSwift.ReachabilityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Darwin.sockaddr, Swift.Int32)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "sockaddr",
+                            "printedName": "Darwin.sockaddr",
+                            "usr": "c:@S@sockaddr"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int32",
+                            "printedName": "Swift.Int32",
+                            "usr": "s:s5Int32V"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CoreSwift.ReachabilityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9CoreSwift17ReachabilityErrorO25failedToCreateWithAddressyACSo8sockaddrV_s5Int32VtcACmF",
+            "mangledName": "$s9CoreSwift17ReachabilityErrorO25failedToCreateWithAddressyACSo8sockaddrV_s5Int32VtcACmF",
+            "moduleName": "CoreSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "failedToCreateWithHostname",
+            "printedName": "failedToCreateWithHostname",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreSwift.ReachabilityError.Type) -> (Swift.String, Swift.Int32) -> CoreSwift.ReachabilityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.Int32) -> CoreSwift.ReachabilityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String, Swift.Int32)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int32",
+                            "printedName": "Swift.Int32",
+                            "usr": "s:s5Int32V"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CoreSwift.ReachabilityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9CoreSwift17ReachabilityErrorO26failedToCreateWithHostnameyACSS_s5Int32VtcACmF",
+            "mangledName": "$s9CoreSwift17ReachabilityErrorO26failedToCreateWithHostnameyACSS_s5Int32VtcACmF",
+            "moduleName": "CoreSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToSetCallback",
+            "printedName": "unableToSetCallback",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreSwift.ReachabilityError.Type) -> (Swift.Int32) -> CoreSwift.ReachabilityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int32) -> CoreSwift.ReachabilityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CoreSwift.ReachabilityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9CoreSwift17ReachabilityErrorO19unableToSetCallbackyACs5Int32VcACmF",
+            "mangledName": "$s9CoreSwift17ReachabilityErrorO19unableToSetCallbackyACs5Int32VcACmF",
+            "moduleName": "CoreSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToSetDispatchQueue",
+            "printedName": "unableToSetDispatchQueue",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreSwift.ReachabilityError.Type) -> (Swift.Int32) -> CoreSwift.ReachabilityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int32) -> CoreSwift.ReachabilityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CoreSwift.ReachabilityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9CoreSwift17ReachabilityErrorO24unableToSetDispatchQueueyACs5Int32VcACmF",
+            "mangledName": "$s9CoreSwift17ReachabilityErrorO24unableToSetDispatchQueueyACs5Int32VcACmF",
+            "moduleName": "CoreSwift"
+          },
+          {
+            "kind": "Var",
+            "name": "unableToGetFlags",
+            "printedName": "unableToGetFlags",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CoreSwift.ReachabilityError.Type) -> (Swift.Int32) -> CoreSwift.ReachabilityError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int32) -> CoreSwift.ReachabilityError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CoreSwift.ReachabilityError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ReachabilityError",
+                        "printedName": "CoreSwift.ReachabilityError",
+                        "usr": "s:9CoreSwift17ReachabilityErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9CoreSwift17ReachabilityErrorO16unableToGetFlagsyACs5Int32VcACmF",
+            "mangledName": "$s9CoreSwift17ReachabilityErrorO16unableToGetFlagsyACs5Int32VcACmF",
+            "moduleName": "CoreSwift"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9CoreSwift17ReachabilityErrorO",
+        "mangledName": "$s9CoreSwift17ReachabilityErrorO",
+        "moduleName": "CoreSwift",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "Reachability",
         "printedName": "Reachability",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Connection",
+            "printedName": "Connection",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "none",
+                "printedName": "none",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreSwift.Reachability.Connection.Type) -> CoreSwift.Reachability.Connection",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Connection",
+                        "printedName": "CoreSwift.Reachability.Connection",
+                        "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CoreSwift.Reachability.Connection.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Connection",
+                            "printedName": "CoreSwift.Reachability.Connection",
+                            "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO4noneyA2EmF",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO4noneyA2EmF",
+                "moduleName": "CoreSwift",
+                "deprecated": true,
+                "declAttributes": [
+                  "Available"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "unavailable",
+                "printedName": "unavailable",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreSwift.Reachability.Connection.Type) -> CoreSwift.Reachability.Connection",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Connection",
+                        "printedName": "CoreSwift.Reachability.Connection",
+                        "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CoreSwift.Reachability.Connection.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Connection",
+                            "printedName": "CoreSwift.Reachability.Connection",
+                            "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO11unavailableyA2EmF",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO11unavailableyA2EmF",
+                "moduleName": "CoreSwift"
+              },
+              {
+                "kind": "Var",
+                "name": "wifi",
+                "printedName": "wifi",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreSwift.Reachability.Connection.Type) -> CoreSwift.Reachability.Connection",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Connection",
+                        "printedName": "CoreSwift.Reachability.Connection",
+                        "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CoreSwift.Reachability.Connection.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Connection",
+                            "printedName": "CoreSwift.Reachability.Connection",
+                            "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO4wifiyA2EmF",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO4wifiyA2EmF",
+                "moduleName": "CoreSwift"
+              },
+              {
+                "kind": "Var",
+                "name": "cellular",
+                "printedName": "cellular",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreSwift.Reachability.Connection.Type) -> CoreSwift.Reachability.Connection",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Connection",
+                        "printedName": "CoreSwift.Reachability.Connection",
+                        "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CoreSwift.Reachability.Connection.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Connection",
+                            "printedName": "CoreSwift.Reachability.Connection",
+                            "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO8cellularyA2EmF",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO8cellularyA2EmF",
+                "moduleName": "CoreSwift"
+              },
+              {
+                "kind": "Var",
+                "name": "description",
+                "printedName": "description",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO11descriptionSSvp",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO11descriptionSSvp",
+                "moduleName": "CoreSwift",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9CoreSwift12ReachabilityC10ConnectionO11descriptionSSvg",
+                    "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO11descriptionSSvg",
+                    "moduleName": "CoreSwift",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Connection",
+                    "printedName": "CoreSwift.Reachability.Connection",
+                    "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Connection",
+                    "printedName": "CoreSwift.Reachability.Connection",
+                    "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO2eeoiySbAE_AEtFZ",
+                "moduleName": "CoreSwift",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO9hashValueSivp",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO9hashValueSivp",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9CoreSwift12ReachabilityC10ConnectionO9hashValueSivg",
+                    "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO9hashValueSivg",
+                    "moduleName": "CoreSwift",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO4hash4intoys6HasherVz_tF",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:9CoreSwift12ReachabilityC10ConnectionO",
+            "mangledName": "$s9CoreSwift12ReachabilityC10ConnectionO",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "CustomStringConvertible",
+                "printedName": "CustomStringConvertible",
+                "usr": "s:s23CustomStringConvertibleP",
+                "mangledName": "$ss23CustomStringConvertibleP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "whenReachable",
+            "printedName": "whenReachable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CoreSwift.Reachability) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreSwift.Reachability) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Reachability",
+                        "printedName": "CoreSwift.Reachability",
+                        "usr": "s:9CoreSwift12ReachabilityC"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC13whenReachableyACcSgvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC13whenReachableyACcSgvp",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CoreSwift.Reachability) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CoreSwift.Reachability) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Reachability",
+                            "printedName": "CoreSwift.Reachability",
+                            "usr": "s:9CoreSwift12ReachabilityC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC13whenReachableyACcSgvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC13whenReachableyACcSgvg",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CoreSwift.Reachability) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CoreSwift.Reachability) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Reachability",
+                            "printedName": "CoreSwift.Reachability",
+                            "usr": "s:9CoreSwift12ReachabilityC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC13whenReachableyACcSgvs",
+                "mangledName": "$s9CoreSwift12ReachabilityC13whenReachableyACcSgvs",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC13whenReachableyACcSgvM",
+                "mangledName": "$s9CoreSwift12ReachabilityC13whenReachableyACcSgvM",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "whenUnreachable",
+            "printedName": "whenUnreachable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CoreSwift.Reachability) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreSwift.Reachability) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Reachability",
+                        "printedName": "CoreSwift.Reachability",
+                        "usr": "s:9CoreSwift12ReachabilityC"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC15whenUnreachableyACcSgvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC15whenUnreachableyACcSgvp",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CoreSwift.Reachability) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CoreSwift.Reachability) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Reachability",
+                            "printedName": "CoreSwift.Reachability",
+                            "usr": "s:9CoreSwift12ReachabilityC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC15whenUnreachableyACcSgvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC15whenUnreachableyACcSgvg",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CoreSwift.Reachability) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CoreSwift.Reachability) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Reachability",
+                            "printedName": "CoreSwift.Reachability",
+                            "usr": "s:9CoreSwift12ReachabilityC"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC15whenUnreachableyACcSgvs",
+                "mangledName": "$s9CoreSwift12ReachabilityC15whenUnreachableyACcSgvs",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC15whenUnreachableyACcSgvM",
+                "mangledName": "$s9CoreSwift12ReachabilityC15whenUnreachableyACcSgvM",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reachableOnWWAN",
+            "printedName": "reachableOnWWAN",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC15reachableOnWWANSbvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC15reachableOnWWANSbvp",
+            "moduleName": "CoreSwift",
+            "deprecated": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "Available"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC15reachableOnWWANSbvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC15reachableOnWWANSbvg",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowsCellularConnection",
+            "printedName": "allowsCellularConnection",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC24allowsCellularConnectionSbvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC24allowsCellularConnectionSbvp",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC24allowsCellularConnectionSbvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC24allowsCellularConnectionSbvg",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC24allowsCellularConnectionSbvs",
+                "mangledName": "$s9CoreSwift12ReachabilityC24allowsCellularConnectionSbvs",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC24allowsCellularConnectionSbvM",
+                "mangledName": "$s9CoreSwift12ReachabilityC24allowsCellularConnectionSbvM",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "notificationCenter",
+            "printedName": "notificationCenter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationCenter",
+                "printedName": "Foundation.NotificationCenter",
+                "usr": "c:objc(cs)NSNotificationCenter"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0Cvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0Cvp",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NotificationCenter",
+                    "printedName": "Foundation.NotificationCenter",
+                    "usr": "c:objc(cs)NSNotificationCenter"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0Cvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0Cvg",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NotificationCenter",
+                    "printedName": "Foundation.NotificationCenter",
+                    "usr": "c:objc(cs)NSNotificationCenter"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0Cvs",
+                "mangledName": "$s9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0Cvs",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0CvM",
+                "mangledName": "$s9CoreSwift12ReachabilityC18notificationCenterSo014NSNotificationE0CvM",
+                "moduleName": "CoreSwift",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentReachabilityString",
+            "printedName": "currentReachabilityString",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC07currentC6StringSSvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC07currentC6StringSSvp",
+            "moduleName": "CoreSwift",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC07currentC6StringSSvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC07currentC6StringSSvg",
+                "moduleName": "CoreSwift",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "connection",
+            "printedName": "connection",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Connection",
+                "printedName": "CoreSwift.Reachability.Connection",
+                "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC10connectionAC10ConnectionOvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC10connectionAC10ConnectionOvp",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Connection",
+                    "printedName": "CoreSwift.Reachability.Connection",
+                    "usr": "s:9CoreSwift12ReachabilityC10ConnectionO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC10connectionAC10ConnectionOvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC10connectionAC10ConnectionOvg",
+                "moduleName": "CoreSwift",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(reachabilityRef:queueQoS:targetQueue:notificationQueue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reachability",
+                "printedName": "CoreSwift.Reachability",
+                "usr": "s:9CoreSwift12ReachabilityC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SCNetworkReachability",
+                "printedName": "SystemConfiguration.SCNetworkReachability",
+                "usr": "c:@T@SCNetworkReachabilityRef"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchQoS",
+                "printedName": "Dispatch.DispatchQoS",
+                "hasDefaultArg": true,
+                "usr": "s:8Dispatch0A3QoSV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9CoreSwift12ReachabilityC15reachabilityRef8queueQoS11targetQueue012notificationI0ACSo09SCNetworkcE0a_8Dispatch0lG1SVSo012OS_dispatch_F0CSgAOtcfc",
+            "mangledName": "$s9CoreSwift12ReachabilityC15reachabilityRef8queueQoS11targetQueue012notificationI0ACSo09SCNetworkcE0a_8Dispatch0lG1SVSo012OS_dispatch_F0CSgAOtcfc",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hostname:queueQoS:targetQueue:notificationQueue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reachability",
+                "printedName": "CoreSwift.Reachability",
+                "usr": "s:9CoreSwift12ReachabilityC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchQoS",
+                "printedName": "Dispatch.DispatchQoS",
+                "hasDefaultArg": true,
+                "usr": "s:8Dispatch0A3QoSV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9CoreSwift12ReachabilityC8hostname8queueQoS11targetQueue012notificationH0ACSS_8Dispatch0jF1SVSo012OS_dispatch_E0CSgAMtKcfc",
+            "mangledName": "$s9CoreSwift12ReachabilityC8hostname8queueQoS11targetQueue012notificationH0ACSS_8Dispatch0jF1SVSo012OS_dispatch_E0CSgAMtKcfc",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(queueQoS:targetQueue:notificationQueue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Reachability",
+                "printedName": "CoreSwift.Reachability",
+                "usr": "s:9CoreSwift12ReachabilityC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DispatchQoS",
+                "printedName": "Dispatch.DispatchQoS",
+                "hasDefaultArg": true,
+                "usr": "s:8Dispatch0A3QoSV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Dispatch.DispatchQueue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DispatchQueue",
+                    "printedName": "Dispatch.DispatchQueue",
+                    "usr": "c:objc(cs)OS_dispatch_queue"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9CoreSwift12ReachabilityC8queueQoS11targetQueue012notificationG0AC8Dispatch0iE1SV_So012OS_dispatch_D0CSgALtKcfc",
+            "mangledName": "$s9CoreSwift12ReachabilityC8queueQoS11targetQueue012notificationG0AC8Dispatch0iE1SV_So012OS_dispatch_D0CSgALtKcfc",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "startNotifier",
+            "printedName": "startNotifier()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9CoreSwift12ReachabilityC13startNotifieryyKF",
+            "mangledName": "$s9CoreSwift12ReachabilityC13startNotifieryyKF",
+            "moduleName": "CoreSwift",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopNotifier",
+            "printedName": "stopNotifier()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9CoreSwift12ReachabilityC12stopNotifieryyF",
+            "mangledName": "$s9CoreSwift12ReachabilityC12stopNotifieryyF",
+            "moduleName": "CoreSwift",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "isReachable",
+            "printedName": "isReachable",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC11isReachableSbvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC11isReachableSbvp",
+            "moduleName": "CoreSwift",
+            "deprecated": true,
+            "declAttributes": [
+              "Available",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC11isReachableSbvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC11isReachableSbvg",
+                "moduleName": "CoreSwift",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isReachableViaWWAN",
+            "printedName": "isReachableViaWWAN",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC18isReachableViaWWANSbvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC18isReachableViaWWANSbvp",
+            "moduleName": "CoreSwift",
+            "deprecated": true,
+            "declAttributes": [
+              "Available"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC18isReachableViaWWANSbvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC18isReachableViaWWANSbvg",
+                "moduleName": "CoreSwift",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isReachableViaWiFi",
+            "printedName": "isReachableViaWiFi",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC18isReachableViaWiFiSbvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC18isReachableViaWiFiSbvp",
+            "moduleName": "CoreSwift",
+            "deprecated": true,
+            "declAttributes": [
+              "Available"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC18isReachableViaWiFiSbvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC18isReachableViaWiFiSbvg",
+                "moduleName": "CoreSwift",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC11descriptionSSvp",
+            "mangledName": "$s9CoreSwift12ReachabilityC11descriptionSSvp",
+            "moduleName": "CoreSwift",
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC11descriptionSSvg",
+                "mangledName": "$s9CoreSwift12ReachabilityC11descriptionSSvg",
+                "moduleName": "CoreSwift",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isConnected",
+            "printedName": "isConnected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9CoreSwift12ReachabilityC11isConnectedSbvpZ",
+            "mangledName": "$s9CoreSwift12ReachabilityC11isConnectedSbvpZ",
+            "moduleName": "CoreSwift",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9CoreSwift12ReachabilityC11isConnectedSbvgZ",
+                "mangledName": "$s9CoreSwift12ReachabilityC11isConnectedSbvgZ",
+                "moduleName": "CoreSwift",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9CoreSwift12ReachabilityC",
+        "mangledName": "$s9CoreSwift12ReachabilityC",
+        "moduleName": "CoreSwift",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "CoreSwift",
         "declAttributes": [
@@ -9244,32 +10936,33 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "Reachability",
-        "printedName": "Reachability",
+        "name": "Name",
+        "printedName": "Name",
         "children": [
           {
             "kind": "Var",
-            "name": "isConnected",
-            "printedName": "isConnected",
+            "name": "reachabilityChanged",
+            "printedName": "reachabilityChanged",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Name",
+                "printedName": "Foundation.NSNotification.Name",
+                "usr": "c:@T@NSNotificationName"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12ReachabilityAAC9CoreSwiftE11isConnectedSbvpZ",
-            "mangledName": "$s12ReachabilityAAC9CoreSwiftE11isConnectedSbvpZ",
+            "usr": "s:So18NSNotificationNamea9CoreSwiftE19reachabilityChangedABvpZ",
+            "mangledName": "$sSo18NSNotificationNamea9CoreSwiftE19reachabilityChangedABvpZ",
             "moduleName": "CoreSwift",
             "static": true,
             "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
+              "HasInitialValue",
+              "HasStorage"
             ],
             "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -9278,30 +10971,118 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
+                    "name": "Name",
+                    "printedName": "Foundation.NSNotification.Name",
+                    "usr": "c:@T@NSNotificationName"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12ReachabilityAAC9CoreSwiftE11isConnectedSbvgZ",
-                "mangledName": "$s12ReachabilityAAC9CoreSwiftE11isConnectedSbvgZ",
+                "usr": "s:So18NSNotificationNamea9CoreSwiftE19reachabilityChangedABvgZ",
+                "mangledName": "$sSo18NSNotificationNamea9CoreSwiftE19reachabilityChangedABvgZ",
                 "moduleName": "CoreSwift",
                 "static": true,
-                "declAttributes": [
-                  "Final"
-                ],
+                "implicit": true,
                 "isFromExtension": true,
                 "accessorKind": "get"
               }
             ]
           }
         ],
-        "declKind": "Class",
-        "usr": "s:12ReachabilityAAC",
-        "mangledName": "$s12ReachabilityAAC",
-        "moduleName": "Reachability",
-        "isExternal": true
+        "declKind": "Struct",
+        "usr": "c:@T@NSNotificationName",
+        "moduleName": "Foundation",
+        "declAttributes": [
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "SynthesizedProtocol",
+          "Sendable"
+        ],
+        "isFromExtension": true,
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSString",
+                    "printedName": "Foundation.NSString",
+                    "usr": "c:objc(cs)NSString"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_SwiftNewtypeWrapper",
+            "printedName": "_SwiftNewtypeWrapper",
+            "usr": "s:s20_SwiftNewtypeWrapperP",
+            "mangledName": "$ss20_SwiftNewtypeWrapperP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_HasCustomAnyHashableRepresentation",
+            "printedName": "_HasCustomAnyHashableRepresentation",
+            "usr": "s:s35_HasCustomAnyHashableRepresentationP",
+            "mangledName": "$ss35_HasCustomAnyHashableRepresentationP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -9331,14 +11112,14 @@
     {
       "filePath": "\/Users\/andreluiscampopiano\/Library\/Mobile Documents\/com~apple~CloudDocs\/Documents\/ios_studies\/core-swift\/CoreSwift\/Sources\/Provider\/ApiProvider.swift",
       "kind": "StringLiteral",
-      "offset": 247,
+      "offset": 227,
       "length": 6,
       "value": "\"Info\""
     },
     {
       "filePath": "\/Users\/andreluiscampopiano\/Library\/Mobile Documents\/com~apple~CloudDocs\/Documents\/ios_studies\/core-swift\/CoreSwift\/Sources\/Provider\/ApiProvider.swift",
       "kind": "StringLiteral",
-      "offset": 280,
+      "offset": 260,
       "length": 7,
       "value": "\"plist\""
     },
@@ -10139,6 +11920,41 @@
       "offset": 1256,
       "length": 3,
       "value": "503"
+    },
+    {
+      "filePath": "\/Users\/andreluiscampopiano\/Library\/Mobile Documents\/com~apple~CloudDocs\/Documents\/ios_studies\/core-swift\/CoreSwift\/Sources\/Infrastructure\/Reachability\/ReachabilityLocal.swift",
+      "kind": "StringLiteral",
+      "offset": 1742,
+      "length": 33,
+      "value": "\"ReachabilityChangedNotification\""
+    },
+    {
+      "filePath": "\/Users\/andreluiscampopiano\/Library\/Mobile Documents\/com~apple~CloudDocs\/Documents\/ios_studies\/core-swift\/CoreSwift\/Sources\/Infrastructure\/Reachability\/ReachabilityLocal.swift",
+      "kind": "StringLiteral",
+      "offset": 1870,
+      "length": 21,
+      "value": "\"reachabilityChanged\""
+    },
+    {
+      "filePath": "\/Users\/andreluiscampopiano\/Library\/Mobile Documents\/com~apple~CloudDocs\/Documents\/ios_studies\/core-swift\/CoreSwift\/Sources\/Infrastructure\/Reachability\/ReachabilityLocal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3139,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andreluiscampopiano\/Library\/Mobile Documents\/com~apple~CloudDocs\/Documents\/ios_studies\/core-swift\/CoreSwift\/Sources\/Infrastructure\/Reachability\/ReachabilityLocal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4311,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/andreluiscampopiano\/Library\/Mobile Documents\/com~apple~CloudDocs\/Documents\/ios_studies\/core-swift\/CoreSwift\/Sources\/Infrastructure\/Reachability\/ReachabilityLocal.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4383,
+      "length": 5,
+      "value": "false"
     }
   ]
 }
