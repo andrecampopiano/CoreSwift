@@ -1,0 +1,315 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios16.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CoreSwift
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Reachability
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import os
+open class Dynamic<T> {
+  public typealias BindType = ((T) -> Swift.Void)
+  public var value: T {
+    get
+    set
+  }
+  public init(_ val: T)
+  public func bind(skip: Swift.Bool = false, fresh: Swift.Bool = false, _ bind: @escaping CoreSwift.Dynamic<T>.BindType)
+  @objc deinit
+}
+extension UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) public func downloaded(from url: Foundation.URL, contentMode mode: UIKit.UIView.ContentMode = .scaleAspectFit)
+  @_Concurrency.MainActor(unsafe) public func downloaded(from link: Swift.String, contentMode mode: UIKit.UIView.ContentMode = .scaleAspectFit)
+}
+public typealias NetworkingCompletion = (() throws -> CoreSwift.ResponseObject) -> Swift.Void
+public typealias NetworkingResponse = () throws -> CoreSwift.ResponseObject
+extension UIKit.UITableView {
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableCell<T>(_ cellType: T.Type, for indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func registerCell<T>(_ cellType: T.Type) where T : UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) public func registerNib<T>(_ cellType: T.Type, bundle: Foundation.Bundle) where T : UIKit.UITableViewCell
+}
+@objc @_inheritsConvenienceInitializers open class AsyncOperation : Foundation.Operation {
+  public enum State : Swift.String {
+    case ready
+    case executing
+    case finished
+    case cancelled
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc override dynamic public var isReady: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isExecuting: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isFinished: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isCancelled: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isAsynchronous: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic open func main()
+  @objc override dynamic open func cancel()
+  final public func finish()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc open class BaseManager : Foundation.OperationQueue {
+  public static let maxConcurrentOperationCount: Swift.Int
+  public init(_ maxConcurrentOperationCount: Swift.Int = BaseManager.maxConcurrentOperationCount)
+  @objc deinit
+}
+public typealias NetworkingParameters = (bodyParameters: [Swift.String : Swift.AnyObject]?, queryParameters: [Swift.String : Swift.String]?)
+public struct NetworkingRequestData : Swift.Equatable {
+  public let url: Swift.String
+  public let httpMethod: CoreSwift.HttpRequestType
+  public let parameters: CoreSwift.NetworkingParameters?
+  public let header: [Swift.String : Swift.String]
+  public let isAuthenticated: Swift.Bool
+  public let needAntiFraud: Swift.Bool
+  public let useSharedSession: Swift.Bool
+  public init(url: Swift.String, httpMethod: CoreSwift.HttpRequestType, parameters: CoreSwift.NetworkingParameters? = nil, header: [Swift.String : Swift.String] = [:], isAuthenticated: Swift.Bool = false, shouldUseAntiFraud: Swift.Bool = false, shouldUseSharedSession: Swift.Bool = false)
+  public static func == (lhs: CoreSwift.NetworkingRequestData, rhs: CoreSwift.NetworkingRequestData) -> Swift.Bool
+}
+public enum HttpRequestType : Swift.String {
+  case get
+  case post
+  case head
+  case put
+  case delete
+  case patch
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Swift.String {
+  public func localize(_ accessibilty: Swift.Bool = false, bundle: Foundation.Bundle) -> Swift.String
+}
+public enum FilePList {
+}
+public struct InfoPList : Swift.Codable {
+  public var serverURL: Swift.String?
+  public var appEnvironment: Swift.String?
+  public var bundleIdentifier: Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var safeTopAnchor: UIKit.NSLayoutYAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeLeftAnchor: UIKit.NSLayoutXAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeRightAnchor: UIKit.NSLayoutXAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeBottomAnchor: UIKit.NSLayoutYAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeCenterXAnchor: UIKit.NSLayoutXAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var safeCenterYAnchor: UIKit.NSLayoutYAxisAnchor {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var cornerRadius: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var borderWidth: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var borderColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public func anchor(top: UIKit.NSLayoutYAxisAnchor? = nil, bottom: UIKit.NSLayoutYAxisAnchor? = nil, paddingTop: CoreFoundation.CGFloat = .zero, paddingBottom: CoreFoundation.CGFloat = .zero)
+  @_Concurrency.MainActor(unsafe) public func anchor(left: UIKit.NSLayoutXAxisAnchor? = nil, right: UIKit.NSLayoutXAxisAnchor? = nil, paddingLeft: CoreFoundation.CGFloat = .zero, paddingRight: CoreFoundation.CGFloat = .zero)
+  @_Concurrency.MainActor(unsafe) public func anchor(horizontal: UIKit.NSLayoutXAxisAnchor? = nil, vertical: UIKit.NSLayoutYAxisAnchor? = nil, paddingHorizontal: CoreFoundation.CGFloat = .zero, paddingVertical: CoreFoundation.CGFloat = .zero)
+  @_Concurrency.MainActor(unsafe) public func anchor(width: CoreFoundation.CGFloat = .zero, height: CoreFoundation.CGFloat = .zero)
+  @_Concurrency.MainActor(unsafe) public func roundCorners(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func roundCorners(maskedCorner: QuartzCore.CACornerMask?, radius: CoreFoundation.CGFloat)
+}
+public protocol DecoderData {
+  func decode<T>(_ type: T.Type, from data: Foundation.Data) throws -> T where T : Swift.Decodable
+}
+public struct FileRepresentation {
+  public enum FileRepresentationError : Swift.Error {
+    case invalidData
+    public static func == (a: CoreSwift.FileRepresentation.FileRepresentationError, b: CoreSwift.FileRepresentation.FileRepresentationError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Extension : Swift.String {
+    case json
+    case html
+    case pdf
+    case plist
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var path: Swift.String? {
+    get
+  }
+  public var data: Foundation.Data? {
+    get
+  }
+  public var json: [Swift.String : Swift.AnyObject]? {
+    get
+  }
+  public init(withFileName fileName: Swift.String, fileExtension: CoreSwift.FileRepresentation.Extension, fileBundle: Foundation.Bundle)
+  public init(withFileData fileData: Foundation.Data)
+  public func decoded<T>(to type: T.Type, using decoder: CoreSwift.DecoderData) throws -> T where T : Swift.Decodable
+}
+extension Foundation.PropertyListDecoder : CoreSwift.DecoderData {
+}
+extension Foundation.JSONDecoder : CoreSwift.DecoderData {
+}
+public class NetworkingProviderMock {
+  public init(bundle: Foundation.Bundle)
+  public func request(_ urlPath: Swift.String, parameters: CoreSwift.NetworkingParameters?, header: [Swift.String : Swift.String]?, httpMethod: CoreSwift.HttpRequestType) throws -> Foundation.URLRequest
+  public func request(requestData: CoreSwift.NetworkingRequestData, completion: (() throws -> CoreSwift.ResponseObject) -> Swift.Void) -> Foundation.URLSessionTask?
+  @objc deinit
+}
+public struct ResponseObject : Swift.Equatable {
+  public let status: CoreSwift.HttpResponseStatus
+  public let data: Foundation.Data?
+  public let requestId: Swift.String?
+  public let traceId: Swift.String?
+  public init(responseStatus: CoreSwift.HttpResponseStatus, responseData: Foundation.Data?, responseRequestId: Swift.String?, responseTraceId: Swift.String?)
+  public static func == (lhs: CoreSwift.ResponseObject, rhs: CoreSwift.ResponseObject) -> Swift.Bool
+}
+extension ObjectiveC.NSObject {
+  public class var className: Swift.String {
+    get
+  }
+}
+public enum Environment : Swift.String {
+  case debug
+  case develop
+  case homologation
+  case release
+  public static var appEnvironment: CoreSwift.Environment {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NetworkingUtils {
+  public static func updateRequest(request: inout Foundation.NSMutableURLRequest, with url: Foundation.URL, and parameters: CoreSwift.NetworkingParameters?) throws
+  public static func updateData(httpResponse: Foundation.HTTPURLResponse, data: Foundation.Data?) -> Foundation.Data?
+  public static func prepareResponse(httpResponse: Foundation.HTTPURLResponse, data: Foundation.Data?) -> CoreSwift.ResponseObject
+  public static func retrieveString(data: Foundation.Data?) throws -> Swift.String
+  public static func retrieveDictionary(data: Foundation.Data?) throws -> [Swift.String : Swift.AnyObject]
+  public static func retrieveArray(data: Foundation.Data?) throws -> [Swift.AnyObject]
+  public static func retrieveData(responseData: Foundation.Data?) throws -> Foundation.Data
+}
+public class BaseProviderMock {
+  public init(jsonFile: Swift.String, bundle: Foundation.Bundle)
+  public func jsonWithFile() -> Foundation.Data?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class Core {
+  @objc deinit
+}
+public typealias NetworkingOperationGetHeaderCompletion = ((_ header: [Swift.String : Swift.String]) -> Swift.Void)
+@objc open class NetworkingOperation : CoreSwift.AsyncOperation {
+  public var provider: CoreSwift.ApiProviderProtocol? {
+    get
+  }
+  public init(provider: CoreSwift.ApiProviderProtocol? = nil, timeout: Swift.Double? = nil)
+  @objc deinit
+}
+final public class ApiProviderMock : CoreSwift.ApiProviderProtocol {
+  public init(fileName: Swift.String, fileBundle: Foundation.Bundle, responseStatus: CoreSwift.HttpResponseStatus = .okay)
+  final public func baseRequest(requestData: CoreSwift.NetworkingRequestData, completion: (() throws -> CoreSwift.ResponseObject) -> Swift.Void) -> Foundation.URLSessionTask?
+  final public func baseWebRequest(_ urlPath: Swift.String, parameters: CoreSwift.NetworkingParameters?, header: [Swift.String : Swift.String]?, httpMethod: CoreSwift.HttpRequestType) throws -> Foundation.URLRequest
+  @objc deinit
+}
+public enum BaseError : Swift.Error, Swift.Equatable {
+  case parse(Swift.String)
+  case httpRequestError(CoreSwift.NetworkingRequestData?, CoreSwift.ResponseObject?)
+  case invalidURL
+  case requestTimedOut(Foundation.URLRequest?, CoreSwift.NetworkingRequestData?)
+  case notConnected
+  case unknown
+  case noContent
+  case requestError
+  public static func == (a: CoreSwift.BaseError, b: CoreSwift.BaseError) -> Swift.Bool
+}
+public enum HttpResponseStatus : Swift.Int, Swift.Comparable {
+  case okay
+  case created
+  case accepted
+  case nonAuthoritative
+  case noContent
+  case partialContent
+  case badRequest
+  case unauthorized
+  case forbidden
+  case notFound
+  case requestTimeout
+  case conflict
+  case unprocessableEntity
+  case internalServerError
+  case notImplemented
+  case badGateWay
+  case serviceUnavailable
+  public static func < (lhs: CoreSwift.HttpResponseStatus, rhs: CoreSwift.HttpResponseStatus) -> Swift.Bool
+  public static func compare(lhs: CoreSwift.HttpResponseStatus, rhs: CoreSwift.HttpResponseStatus) -> Swift.Bool
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum BundleData<T> where T : Swift.Decodable, T : Swift.Encodable {
+  public static func retrieveData(name: Swift.String, fileType: Swift.String, bundle: Foundation.Bundle) throws -> T
+}
+extension Reachability.Reachability {
+  public static var isConnected: Swift.Bool {
+    get
+  }
+}
+public protocol ApiProviderProtocol {
+  @discardableResult
+  func baseRequest(requestData: CoreSwift.NetworkingRequestData, completion: @escaping CoreSwift.NetworkingCompletion) -> Foundation.URLSessionTask?
+  func baseWebRequest(_ urlPath: Swift.String, parameters: CoreSwift.NetworkingParameters?, header: [Swift.String : Swift.String]?, httpMethod: CoreSwift.HttpRequestType) throws -> Foundation.URLRequest
+}
+extension CoreSwift.AsyncOperation.State : Swift.Equatable {}
+extension CoreSwift.AsyncOperation.State : Swift.Hashable {}
+extension CoreSwift.AsyncOperation.State : Swift.RawRepresentable {}
+extension CoreSwift.HttpRequestType : Swift.Equatable {}
+extension CoreSwift.HttpRequestType : Swift.Hashable {}
+extension CoreSwift.HttpRequestType : Swift.RawRepresentable {}
+extension CoreSwift.FileRepresentation.FileRepresentationError : Swift.Equatable {}
+extension CoreSwift.FileRepresentation.FileRepresentationError : Swift.Hashable {}
+extension CoreSwift.FileRepresentation.Extension : Swift.Equatable {}
+extension CoreSwift.FileRepresentation.Extension : Swift.Hashable {}
+extension CoreSwift.FileRepresentation.Extension : Swift.RawRepresentable {}
+extension CoreSwift.Environment : Swift.Equatable {}
+extension CoreSwift.Environment : Swift.Hashable {}
+extension CoreSwift.Environment : Swift.RawRepresentable {}
+extension CoreSwift.HttpResponseStatus : Swift.Hashable {}
+extension CoreSwift.HttpResponseStatus : Swift.RawRepresentable {}
