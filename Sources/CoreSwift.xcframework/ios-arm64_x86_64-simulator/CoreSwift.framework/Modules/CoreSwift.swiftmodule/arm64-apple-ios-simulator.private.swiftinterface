@@ -1,14 +1,34 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios16.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CoreSwift
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CoreSwift
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
-import Reachability
 import Swift
+import SystemConfiguration
 import UIKit
 import _Concurrency
 import _StringProcessing
 import os
+public protocol ControllerFactoryProtocol {
+  func instantiate() -> UIKit.UIViewController?
+}
+public protocol RouterProtocol {
+  func present(_ viewController: UIKit.UIViewController?)
+  func present(_ viewController: UIKit.UIViewController?, animated: Swift.Bool)
+  func push(_ viewController: UIKit.UIViewController?)
+  func push(_ viewController: UIKit.UIViewController?, transition: (any UIKit.UIViewControllerAnimatedTransitioning)?)
+  func push(_ viewController: UIKit.UIViewController?, transition: (any UIKit.UIViewControllerAnimatedTransitioning)?, animated: Swift.Bool)
+  func push(_ viewController: UIKit.UIViewController?, transition: (any UIKit.UIViewControllerAnimatedTransitioning)?, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  func setRootViewController(_ viewController: UIKit.UIViewController?)
+  func setRootViewController(_ viewController: UIKit.UIViewController?, hideBar: Swift.Bool)
+  func dismissViewController()
+  func dismissViewController(animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  func popViewController()
+  func popViewController(transition: (any UIKit.UIViewControllerAnimatedTransitioning)?)
+  func popViewController(transition: (any UIKit.UIViewControllerAnimatedTransitioning)?, animated: Swift.Bool)
+  func popToRootViewController(animated: Swift.Bool)
+  func popToViewController(_ viewController: UIKit.UIViewController?, animated: Swift.Bool)
+}
 open class Dynamic<T> {
   public typealias BindType = ((T) -> Swift.Void)
   public var value: T {
@@ -29,6 +49,28 @@ extension UIKit.UITableView {
   @_Concurrency.MainActor(unsafe) public func dequeueReusableCell<T>(_ cellType: T.Type, for indexPath: Foundation.IndexPath) -> T where T : UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) public func registerCell<T>(_ cellType: T.Type) where T : UIKit.UITableViewCell
   @_Concurrency.MainActor(unsafe) public func registerNib<T>(_ cellType: T.Type, bundle: Foundation.Bundle) where T : UIKit.UITableViewCell
+}
+@objc public class Router : ObjectiveC.NSObject, CoreSwift.RouterProtocol {
+  public init(rootController: UIKit.UINavigationController?)
+  public func present(_ viewController: UIKit.UIViewController?)
+  public func present(_ viewController: UIKit.UIViewController?, animated: Swift.Bool)
+  public func push(_ viewController: UIKit.UIViewController?)
+  public func push(_ viewController: UIKit.UIViewController?, transition: (any UIKit.UIViewControllerAnimatedTransitioning)?)
+  public func push(_ viewController: UIKit.UIViewController?, transition: (any UIKit.UIViewControllerAnimatedTransitioning)?, animated: Swift.Bool)
+  public func push(_ viewController: UIKit.UIViewController?, transition: (any UIKit.UIViewControllerAnimatedTransitioning)? = nil, animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  public func setRootViewController(_ viewController: UIKit.UIViewController?)
+  public func setRootViewController(_ viewController: UIKit.UIViewController?, hideBar: Swift.Bool = false)
+  public func dismissViewController()
+  public func dismissViewController(animated: Swift.Bool = true, completion: (() -> Swift.Void)? = nil)
+  public func popViewController()
+  public func popViewController(transition: (any UIKit.UIViewControllerAnimatedTransitioning)?)
+  public func popViewController(transition: (any UIKit.UIViewControllerAnimatedTransitioning)? = nil, animated: Swift.Bool = true)
+  public func popToViewController(_ viewController: UIKit.UIViewController?, animated: Swift.Bool)
+  public func popToRootViewController(animated: Swift.Bool)
+  @objc deinit
+}
+extension CoreSwift.Router : UIKit.UINavigationControllerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func navigationController(_ navigationController: UIKit.UINavigationController, animationControllerFor operation: UIKit.UINavigationController.Operation, from fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
 }
 @objc @_inheritsConvenienceInitializers open class AsyncOperation : Foundation.Operation {
   public enum State : Swift.String {
@@ -102,8 +144,8 @@ public struct InfoPList : Swift.Codable {
   public var serverURL: Swift.String?
   public var appEnvironment: Swift.String?
   public var bundleIdentifier: Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public var safeTopAnchor: UIKit.NSLayoutYAxisAnchor {
@@ -177,7 +219,7 @@ public struct FileRepresentation {
   }
   public init(withFileName fileName: Swift.String, fileExtension: CoreSwift.FileRepresentation.Extension, fileBundle: Foundation.Bundle)
   public init(withFileData fileData: Foundation.Data)
-  public func decoded<T>(to type: T.Type, using decoder: CoreSwift.DecoderData) throws -> T where T : Swift.Decodable
+  public func decoded<T>(to type: T.Type, using decoder: any CoreSwift.DecoderData) throws -> T where T : Swift.Decodable
 }
 extension Foundation.PropertyListDecoder : CoreSwift.DecoderData {
 }
@@ -196,6 +238,9 @@ public struct ResponseObject : Swift.Equatable {
   public let traceId: Swift.String?
   public init(responseStatus: CoreSwift.HttpResponseStatus, responseData: Foundation.Data?, responseRequestId: Swift.String?, responseTraceId: Swift.String?)
   public static func == (lhs: CoreSwift.ResponseObject, rhs: CoreSwift.ResponseObject) -> Swift.Bool
+}
+public protocol Coordinator : AnyObject {
+  func start()
 }
 extension ObjectiveC.NSObject {
   public class var className: Swift.String {
@@ -216,6 +261,9 @@ public enum Environment : Swift.String {
     get
   }
 }
+public protocol CoordinatorFactoryProtocol {
+  func makeCoordinator(router: any CoreSwift.RouterProtocol, coordinatorFactory: any CoreSwift.CoordinatorFactoryProtocol, controllerFactory: any CoreSwift.ControllerFactoryProtocol) -> CoreSwift.BaseCoordinator
+}
 public enum NetworkingUtils {
   public static func updateRequest(request: inout Foundation.NSMutableURLRequest, with url: Foundation.URL, and parameters: CoreSwift.NetworkingParameters?) throws
   public static func updateData(httpResponse: Foundation.HTTPURLResponse, data: Foundation.Data?) -> Foundation.Data?
@@ -235,10 +283,17 @@ public class BaseProviderMock {
 }
 public typealias NetworkingOperationGetHeaderCompletion = ((_ header: [Swift.String : Swift.String]) -> Swift.Void)
 @objc open class NetworkingOperation : CoreSwift.AsyncOperation {
-  public var provider: CoreSwift.ApiProviderProtocol? {
+  public var provider: (any CoreSwift.ApiProviderProtocol)? {
     get
   }
-  public init(provider: CoreSwift.ApiProviderProtocol? = nil, timeout: Swift.Double? = nil)
+  public init(provider: (any CoreSwift.ApiProviderProtocol)? = nil, timeout: Swift.Double? = nil)
+  @objc deinit
+}
+open class BaseCoordinator : CoreSwift.Coordinator {
+  public init()
+  open func start()
+  public func addDependency(_ coordinator: any CoreSwift.Coordinator)
+  public func removeDependency(_ coordinator: (any CoreSwift.Coordinator)?)
   @objc deinit
 }
 final public class ApiProviderMock : CoreSwift.ApiProviderProtocol {
@@ -287,7 +342,88 @@ public enum HttpResponseStatus : Swift.Int, Swift.Comparable {
 public enum BundleData<T> where T : Swift.Decodable, T : Swift.Encodable {
   public static func retrieveData(name: Swift.String, fileType: Swift.String, bundle: Foundation.Bundle) throws -> T
 }
-extension Reachability.Reachability {
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (CoreSwift.Reachability) -> ()
+  public typealias NetworkUnreachable = (CoreSwift.Reachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: CoreSwift.Reachability.NetworkStatus, b: CoreSwift.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    @available(*, deprecated, renamed: "unavailable")
+    case none
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: CoreSwift.Reachability.Connection, b: CoreSwift.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: CoreSwift.Reachability.NetworkReachable?
+  public var whenUnreachable: CoreSwift.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: CoreSwift.Reachability.Connection {
+    get
+  }
+  public var connection: CoreSwift.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension CoreSwift.Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+extension CoreSwift.Reachability {
   public static var isConnected: Swift.Bool {
     get
   }
@@ -313,3 +449,9 @@ extension CoreSwift.Environment : Swift.Hashable {}
 extension CoreSwift.Environment : Swift.RawRepresentable {}
 extension CoreSwift.HttpResponseStatus : Swift.Hashable {}
 extension CoreSwift.HttpResponseStatus : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension CoreSwift.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension CoreSwift.Reachability.NetworkStatus : Swift.Hashable {}
+extension CoreSwift.Reachability.Connection : Swift.Equatable {}
+extension CoreSwift.Reachability.Connection : Swift.Hashable {}
