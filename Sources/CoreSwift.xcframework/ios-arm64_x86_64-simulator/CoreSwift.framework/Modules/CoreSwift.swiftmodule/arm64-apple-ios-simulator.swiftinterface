@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name CoreSwift
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
@@ -9,9 +9,6 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import os
-public protocol ControllerFactoryProtocol {
-  func instantiate() -> UIKit.UIViewController?
-}
 public protocol RouterProtocol {
   func present(_ viewController: UIKit.UIViewController?)
   func present(_ viewController: UIKit.UIViewController?, animated: Swift.Bool)
@@ -260,9 +257,6 @@ public enum Environment : Swift.String {
   public var rawValue: Swift.String {
     get
   }
-}
-public protocol CoordinatorFactoryProtocol {
-  func makeCoordinator(router: any CoreSwift.RouterProtocol, coordinatorFactory: any CoreSwift.CoordinatorFactoryProtocol, controllerFactory: any CoreSwift.ControllerFactoryProtocol) -> CoreSwift.BaseCoordinator
 }
 public enum NetworkingUtils {
   public static func updateRequest(request: inout Foundation.NSMutableURLRequest, with url: Foundation.URL, and parameters: CoreSwift.NetworkingParameters?) throws

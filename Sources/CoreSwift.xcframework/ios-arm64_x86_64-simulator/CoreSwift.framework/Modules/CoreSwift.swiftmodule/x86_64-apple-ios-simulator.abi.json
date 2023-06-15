@@ -16,60 +16,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ControllerFactoryProtocol",
-        "printedName": "ControllerFactoryProtocol",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "instantiate",
-            "printedName": "instantiate()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIViewController?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIViewController",
-                    "printedName": "UIKit.UIViewController",
-                    "usr": "c:objc(cs)UIViewController"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:9CoreSwift25ControllerFactoryProtocolP11instantiateSo06UIViewC0CSgyF",
-            "mangledName": "$s9CoreSwift25ControllerFactoryProtocolP11instantiateSo06UIViewC0CSgyF",
-            "moduleName": "CoreSwift",
-            "genericSig": "<τ_0_0 where τ_0_0 : CoreSwift.ControllerFactoryProtocol>",
-            "sugared_genericSig": "<Self where Self : CoreSwift.ControllerFactoryProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:9CoreSwift25ControllerFactoryProtocolP",
-        "mangledName": "$s9CoreSwift25ControllerFactoryProtocolP",
-        "moduleName": "CoreSwift",
-        "declAttributes": [
-          "AccessControl"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "CoreSwift",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "RouterProtocol",
         "printedName": "RouterProtocol",
         "children": [
@@ -6070,70 +6016,6 @@
         "moduleName": "CoreSwift",
         "declAttributes": [
           "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CoreSwift",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "CoordinatorFactoryProtocol",
-        "printedName": "CoordinatorFactoryProtocol",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "makeCoordinator",
-            "printedName": "makeCoordinator(router:coordinatorFactory:controllerFactory:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "BaseCoordinator",
-                "printedName": "CoreSwift.BaseCoordinator",
-                "usr": "s:9CoreSwift15BaseCoordinatorC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "RouterProtocol",
-                "printedName": "CoreSwift.RouterProtocol",
-                "usr": "s:9CoreSwift14RouterProtocolP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CoordinatorFactoryProtocol",
-                "printedName": "CoreSwift.CoordinatorFactoryProtocol",
-                "usr": "s:9CoreSwift26CoordinatorFactoryProtocolP"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ControllerFactoryProtocol",
-                "printedName": "CoreSwift.ControllerFactoryProtocol",
-                "usr": "s:9CoreSwift25ControllerFactoryProtocolP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:9CoreSwift26CoordinatorFactoryProtocolP04makeC06router011coordinatorD0010controllerD0AA04BaseC0CAA06RouterE0_p_AaB_pAA010ControllerdE0_ptF",
-            "mangledName": "$s9CoreSwift26CoordinatorFactoryProtocolP04makeC06router011coordinatorD0010controllerD0AA04BaseC0CAA06RouterE0_p_AaB_pAA010ControllerdE0_ptF",
-            "moduleName": "CoreSwift",
-            "genericSig": "<τ_0_0 where τ_0_0 : CoreSwift.CoordinatorFactoryProtocol>",
-            "sugared_genericSig": "<Self where Self : CoreSwift.CoordinatorFactoryProtocol>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:9CoreSwift26CoordinatorFactoryProtocolP",
-        "mangledName": "$s9CoreSwift26CoordinatorFactoryProtocolP",
-        "moduleName": "CoreSwift",
-        "declAttributes": [
-          "AccessControl"
         ]
       },
       {
